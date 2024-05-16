@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Page - Step 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Logo BG-->
+<div class="logo-container">A
+    <img src="TPLogo11.png" alt="Logo">
+</div>
+
+    <div class="popup-container">
+    
+        <div class="popup-content" id="step1">
+            <div class="additional-logo">
+                <img src="TPLogo11.png" alt="Additional Logo">
+            </div>
+            
+    <div class="language-selection">
+        <label for="emp-lang-select">Choose Your Language:</label>
+        <select id="emp-lang-select">
+            <option value="english">English</option>
+            <option value="japanese">Japanese</option>
+            <option value="korean">Korean</option>
+            <option value="malay">Malay</option>
+            <option value="mandarin">Mandarin</option>
+            <option value="thai">Thai</option>
+        </select>
+    </div>
+
+        <h2>  Enter Your BMS</h2>
+        <input type="text" id="bms-id" placeholder="Enter BMS ID">
+        
+        <h3>Choose Your referral Language:</h3>
+        <select id="language-select">
+            <option value="korean">Korean</option>
+            <option value="japanese">Japanese</option>
+            <option value="english">English</option>
+            <option value="malay">Malay</option>
+            <option value="mandarin">Mandarin</option>
+            <option value="thai">Thai</option>
+        </select>
+
+        <h3>Choose Your referral Location:</h3>
+        <select id="location-select">
+            <!-- Options will be populated dynamically based on the selected language -->
+        </select>
+
+        <h3>Choose Your referral Job :</h3>
+        <select id="job-type-select">
+            <!-- Options will be populated dynamically based on the selected language and location -->
+        </select>
+
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div class="popup-content" id="step2" style="display: none;">
+        <div class="additional-logo">
+            <img src="TPLogo11.png" alt="Additional Logo">
+        </div>
+        <h2>Thank you for your referral!</h2>
+        <p>As we grow into Malaysia, become #MoreTogether as we #ElevateAsia, here are the links your friend can use so this is tagged to your profile into our Recruiting System.</p>
+        <div id="generated-link"></div>
+        <!-- Add buttons to share link via WhatsApp and Line -->
+        <button id="share-button-whatsapp">Share via WhatsApp  </button>
+        <button id="share-button-line">Share via Line</button>
+        
+        <div id="qrBox">
+            <img src="" id="qrImg">
+        </div>
+        <button onclick="generateQrCode()">or have your friend scanning this code above!</button>
+        <p>Thank you for your referral!</p>
+        <p>As we grow into Malaysia, become #MoreTogether as we #ElevateAsia, here are the links your friend can use so this is tagged to your profile into our Recruiting System.</p>
+        <h2>They can visit our locations in VR so they learn of us:</h2>
+
+        <div id="picture-container">
+            <img src="MicrosoftTeams-image.png" alt="Description of the image">
+        </div>
+        <p>The Talent Attraction Team</p>
+      
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
